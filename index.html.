@@ -1,0 +1,120 @@
+cervantes.wings.com<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervantes | Super App</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --bg: #0f0f0f;
+            --card: #1e1e1e;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; margin: 0; }
+        
+        /* BARRA SUPERIOR (Tipo Google/Gemini) */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 20px; background: #000; border-bottom: 1px solid #333;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .search-bar {
+            background: #222; border: 1px solid #444; color: white;
+            padding: 8px 15px; border-radius: 20px; width: 40%;
+        }
+        .logo { color: var(--gold); font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
+
+        /* HEADER */
+        header { padding: 40px 20px; text-align: center; background: linear-gradient(to bottom, #1a1a1a, var(--bg)); }
+
+        /* ESTILO FEED (TikTok/Instagram) */
+        .feed-container { display: flex; overflow-x: auto; gap: 15px; padding: 20px; scrollbar-width: none; }
+        .story { min-width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--gold); background: #333; }
+
+        /* PLANOS DE ASSINATURA */
+        .plans-section { padding: 40px 20px; }
+        .plans-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .plan-card {
+            background: var(--card); border: 1px solid #333; border-radius: 15px;
+            padding: 30px; width: 280px; transition: 0.3s; position: relative;
+        }
+        .plan-card.premium { border: 2px solid var(--gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .plan-card h3 { color: var(--gold); margin-top: 0; }
+        .price { font-size: 2.5rem; font-weight: bold; margin: 15px 0; }
+        .price span { font-size: 1rem; color: #888; }
+        
+        /* BOTÕES */
+        .btn {
+            background: var(--gold); color: black; padding: 12px 20px;
+            border: none; border-radius: 8px; cursor: pointer; font-weight: bold;
+            text-decoration: none; display: block; width: 80%; margin: 20px auto 0;
+        }
+        .btn:hover { background: #f2d06b; }
+
+        /* WHATSAPP FLOATING BUTTON */
+        .wa-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background: #25d366; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-weight: bold; font-size: 20px;
+        }
+
+        .features-list { text-align: left; font-size: 0.9rem; color: #ccc; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">CERVANTES</div>
+    <input type="text" class="search-bar" placeholder="Pergunte ao Gemini Cervantes...">
+    <div>
+        <span style="margin-right: 15px;">Login</span>
+        <button style="background: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer;">Criar Conta</button>
+    </div>
+</nav>
+
+<div class="feed-container">
+    <div class="story"></div><div class="story"></div><div class="story"></div>
+    <div class="story"></div><div class="story"></div><div class="story"></div>
+    <p style="align-self: center; margin-left: 10px; color: #888;">Stories Cervantes</p>
+</div>
+
+<header>
+    <h1>Tudo o que você ama num só lugar.</h1>
+    <p>Vídeos, Redes Sociais e Inteligência Artificial de elite.</p>
+</header>
+
+<div class="plans-section">
+    <div class="plans-grid">
+        <div class="plan-card">
+            <h3>Criação IA</h3>
+            <p>Adicione ferramentas de criação de vídeos por IA no seu perfil.</p>
+            <div class="price">3$<span>/mês</span></div>
+            <ul class="features-list">
+                <li>✅ Geração de vídeos curtos</li>
+                <li>✅ Vozes neurais reais</li>
+                <li>✅ Filtros estilo TikTok</li>
+            </ul>
+            <a href="#" class="btn">Assinar Plano</a>
+        </div>
+
+        <div class="plan-card premium">
+            <span style="background: var(--gold); color: black; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; position: absolute; top: 10px; right: 10px;">MAIS PROTEGIDO</span>
+            <h3>Proteção Total</h3>
+            <p>Bloqueie qualquer pessoa de baixar ou republicar seus vídeos.</p>
+            <div class="price">16$<span>/mês</span></div>
+            <ul class="features-list">
+                <li>🔒 Anti-Cópia Ativo</li>
+                <li>🔒 Proteção de Direitos Autorais</li>
+                <li>🔒 Selo de Verificado Ouro</li>
+                <li>🤖 IA Gemini Ilimitada</li>
+            </ul>
+            <a href="#" class="btn">Proteger meu Conteúdo</a>
+        </div>
+    </div>
+</div>
+
+<div class="wa-float">💬</div>
+
+</body>
+</html>
